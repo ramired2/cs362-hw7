@@ -1,3 +1,11 @@
+def sneakyLeap(x):
+    isLeap = False
+    
+    if x % 100 == 0 and x % 400 == 0:
+        isLeap = True
+
+    return isLeap
+
 def check ():
     msg = "Please enter a year: "
     year = input(msg)
