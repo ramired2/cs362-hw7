@@ -1,18 +1,22 @@
 def sneakyLeap(x):
     isLeap = False
     
-    if x % 100 == 0 and x % 400 == 0:
+    if x % 100 == 0:
+        if x % 400 == 0:
+            isLeap = True
+    else:
         isLeap = True
 
     return isLeap
 
-def check ():
-    msg = "Please enter a year: "
-    year = input(msg)
-
-    year = int(year)
+def check (year):
 
     if year % 4 == 0:
-        return "Leap Year"
+        if (sneakyLeap(year) == True):
+            msg = "Leap Year"
+        else:
+            msg = "Not a leap Year"
     else:
-        return "Not a leap Year"
+        msg = "Not a leap Year"
+    
+    return msg
